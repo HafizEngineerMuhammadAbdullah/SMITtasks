@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task14-17(Arrays)</title>
+</head>
+
+<body>
+    <script>
+        // Qs: 01
+        // Declare an empty array using JS literal notation to store student names in future.
+        var studNames = [];
+
+
+        //Qs: 02
+        // Declare an empty array using JS object notation to store student names in future.
+        var studentNames = new Array();
+
+        //Qs : 03
+        // Declare and initialize a strings array.
+        var strArr = ["Shiekh-al-Shuraim", "Shiekh-al-Sudais", "Shiekh-Yasir-al-Dusairi", "Shiekh-Muhammad-Abdullah"];
+
+
+        //Qs: 04
+        // Declare and initialize a numbers array.
+        var numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+
+        //Qs : 05
+        // Declare and initialize a boolean array.
+        var boolArr = [true, false];
+
+
+        //Qs: 06
+        // Declare and initialize a mixed array.
+        var mixArr = ["Dr-Abdullah", 90, true, "Section-A", "Computer Software Engineering", "Karachi-University", "UBIT", "4.0GPA"];
+
+        //Qs: 07
+        // Declare and Initialize an array and store available mobile networks in Pakistan.
+        var mobileNetworks = ["Jazz", "Zong", "Ufone", "Telenor"];
+
+
+        //Qs: 08
+        // Declare and Initialize an array and store available education qualifications in Pakistan (e.g. SSC, HSC, BCS, BS, BCOM, MS,M. Phil., PhD).
+        // Show the listed qualifications in your browser
+        var educationQualificationList = ["SSC", "HSC", "BCS", "BS", "BCOM", "BBA", "MS", "M.Phil", "PhD"];
+        document.write("<br>");
+        document.write("<h1><strong><em>Qualifications :</em></strong></h1>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+        for (var i = 0; i < educationQualificationList.length; ++i) {
+            document.write((i + 1) + ") " + educationQualificationList[i] + "<br>");
+        }
+
+
+        //Qs: 9
+        // Declare and initialize an empty array to store top movies of 2015.
+        // Add movies one by one in an array.
+        // Display the elements & length of array in your browser. (Use array’s length method)
+
+        var topMoviesOf2015 = [];
+        topMoviesOf2015.push("Avengers : Age of Ultron");
+        topMoviesOf2015.push("Spectre");
+        topMoviesOf2015.push("Jurassic World");
+        topMoviesOf2015.push("Inside out");
+        document.write("<br>");
+        document.write("<h1><strong><em>Top movies of 2015 :</em></strong></h1>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+        for (var i = 0; i < topMoviesOf2015.length; ++i) {
+            document.write((i + 1) + ") " + topMoviesOf2015[i] + "<br>");
+        }
+        document.write("<br>");
+        document.write("<b><i>Length of the array : </i></b>" + topMoviesOf2015.length + "<br>");
+
+
+        //Qs : 10
+        // Declare and Initialize an array with your favorite cars.Show
+        // a.First index of the array
+        // b.Car at first index of the array
+        // c.Last index of the array
+        // d. Car at last index of the array
+        document.write("<h1><strong><em>Favourite Cars :</em></strong></h1>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+        var carsArr = ["Audi", "Volvo", "Ford", "Lamborghini"];
+        for (var i = 0; i < carsArr.length; ++i) {
+            document.write(carsArr[i]);
+            if (i <= (carsArr.length - 2)) {
+                document.write(" , ");
+            }
+        }
+        document.write("<br>");
+        document.write("First Index Of the Array : " + " 0 " + "<br>");
+        document.write("Car at first index Of the array : " + carsArr[0] + "<br>");
+        document.write("Last Index Of the Array : " + (carsArr.length - 1) + "<br>");
+        document.write("Car at last index Of the array : " + carsArr[carsArr.length - 1] + "<br>");
+        document.write("<br>");
+
+
+
+
+        //Qs: 11
+        // Write a program to store 3 student names in an array.
+        // Take another array to store score of these three students.
+        // Assume that total marks are 500 for each student,
+        // display the scores & percentages of students:
+        var studentNames = ["Dr-Abdul", "Ahmed", "Ali"];
+        var studScores = [490, 320, 200];
+        for (var i = 0; i < studScores.length; ++i) {
+            document.write("Score of " + studentNames[i] + " is " + studScores[i] + ". Percentage : " + ((studScores[i] / 500) * 100) + "%" + "<br>");
+        }
+
+
+        //Qs: 12
+        // Initialize an array with color names.Display the array elements in your browser.
+        // a.Ask the user what color he / she wants to add to the  beginning & add that color to the beginning of the array.
+        // Display the updated array in your browser.
+        // b.Ask the user what color he / she wants to add to the end & add that color to the end of the array.
+        // Display the updated array in your browser.
+        // c.Add two more color to the beginning of the array
+        // Display the updated array in your browser.
+        // d.Delete the first color in the array.Display the updated array in your browser.
+        // e.Delete the last color in the array.Display the updated array in your browser.
+        // f.Ask the user at which index he / she wants to add a color & color name.Then add the color to desired position / index.
+        // Display the updated array in your browser.
+        // g.Ask the user at which index he / she wants to delete color(s) & how many colors he / she wants to delete.
+        // Then remove the same number of color(s) from user - defined position / index. 
+        // Display the updated array in your browser.
+        var colorNames = ["Red", "Green", "Blue", "Yellow", "Orange", "Purple", "Brown", "Black", "Pink", "White"];
+        document.write("<br>");
+        document.write("<h1><strong><em>Color Names :</em></strong></h1>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        for (var i = 0; i < colorNames.length; ++i) {
+            document.write((i + 1) + ") " + colorNames[i] + "<br>");
+        }
+        document.write("<br>");
+        //Qs: a)
+        var addColor = prompt("What color do you want to add to the beginning of array:...", "Violet");
+        colorNames.unshift(addColor);
+        document.write("<b><i>Updated Array</i></b>" + "<br>");
+        for (var i = 0; i < colorNames.length; ++i) {
+            document.write((i + 1) + ") " + colorNames[i] + "<br>");
+        }
+        document.write("<br>");
+        //Qs: b)
+        addColor = prompt("What color do you want to add to the end of array:...", "Grey");
+        colorNames.push(addColor);
+        document.write("<b><i>Updated Array</i></b>" + "<br>");
+        for (var i = 0; i < colorNames.length; ++i) {
+            document.write((i + 1) + ") " + colorNames[i] + "<br>");
+        }
+        document.write("<br>");
+        //Qs: c)
+        addColor = prompt("What color do you want to add to the beginning of array:...", "Peech");
+        colorNames.unshift(addColor);
+        document.write("<b><i>Updated Array</i></b>" + "<br>");
+        for (var i = 0; i < colorNames.length; ++i) {
+            document.write((i + 1) + ") " + colorNames[i] + "<br>");
+        }
+        document.write("<br>");
+        //Qs: c)
+        addColor = prompt("What color do you want to add to the beginning of array:...", "Indigo");
+        colorNames.unshift(addColor);
+        document.write("<b><i>Updated Array</i></b>" + "<br>");
+        for (var i = 0; i < colorNames.length; ++i) {
+            document.write((i + 1) + ") " + colorNames[i] + "<br>");
+        }
+        document.write("<br>");
+        //Qs: d)
+        colorNames.shift();
+        document.write("<b><i>Updated Array</i></b>" + "<br>");
+        for (var i = 0; i < colorNames.length; ++i) {
+            document.write((i + 1) + ") " + colorNames[i] + "<br>");
+        }
+        document.write("<br>");
+        //Qs: e)
+        colorNames.pop();
+        document.write("<b><i>Updated Array</i></b>" + "<br>");
+        for (var i = 0; i < colorNames.length; ++i) {
+            document.write((i + 1) + ") " + colorNames[i] + "<br>");
+        }
+        document.write("<br>");
+        //Qs: f)
+        var index = prompt("At which index do you want to add a color");
+        addColor = prompt("What color do you want to add at the specified index " + index + ":...");
+        colorNames.splice(index, 0, addColor);
+        document.write("<b><i>Updated Array</i></b>" + "<br>");
+        for (var i = 0; i < colorNames.length; ++i) {
+            document.write((i + 1) + ") " + colorNames[i] + "<br>");
+        }
+        document.write("<br>");
+
+        //Qs: g)
+        index = prompt("from which index do you want to delete the color");
+        deleteColor = Number(prompt("How many color(s) do you want to delete:..."));
+        colorNames.splice(index, deleteColor);
+        document.write("<b><i>Updated Array</i></b>" + "<br>");
+        for (var i = 0; i < colorNames.length; ++i) {
+            document.write((i + 1) + ") " + colorNames[i] + "<br>");
+        }
+        document.write("<br>");
+
+
+
+
+        // Qs : 13
+        //Write a program to store student scores in an array & sort the array in ascending order using Array’s sort method. 
+        var studentScores = [320, 230, 480, 120];
+        document.write("<br>");
+        document.write("Scores of Students : ");
+        for (var i = 0; i < studentScores.length; ++i) {
+            document.write(studentScores[i]);
+            if (i < (studentScores.length - 1)) {
+                document.write(" , ");
+            }
+        }
+        document.write("<br>");
+        studentScores.sort((a, b) => a - b);
+        document.write("<br>");
+        document.write("Ordered Scores of Students : ");
+        for (var i = 0; i < studentScores.length; ++i) {
+            document.write(studentScores[i]);
+            if (i < (studentScores.length - 1)) {
+                document.write(" , ");
+            }
+        }
+        document.write("<br>");
+
+
+        //Qs: 14
+        // Write a program to sort the below mentioned array: 
+
+        var fruits = ["strawberry", "apple", "orange", "banana"];
+        document.write("<h3><b><i>Fruits List : </i></b></h3>");
+        for (var i = 0; i < fruits.length; ++i) {
+            document.write(fruits[i]);
+            if (i < (fruits.length - 1)) {
+                document.write(" , ");
+            }
+        }
+
+        fruits.sort();
+        document.write("<h3><b><i>Ordered Fruits List : </i></b></h3>");
+        for (var i = 0; i < fruits.length; ++i) {
+            document.write(fruits[i]);
+            if (i < (fruits.length - 1)) {
+                document.write(" , ");
+            }
+        }
+        document.write("<br>");
+
+
+
+        //Qs: 15
+        // Write a program to initialize an array with city names. 
+        // Copy 3 array elements from cities array to selectedCities array.
+        var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+        document.write("<i>Cities List :</i>" + "<br>");
+        for (var i = 0; i < cities.length; ++i) {
+            document.write(cities[i]);
+            if (i < (cities.length - 1)) {
+                document.write(" , ");
+            }
+        }
+        document.write("<br>");
+        document.write("<i>Selected Cities List :</i>" + "<br>");
+        var selectedCities = cities.slice(2, 4);
+        for (var i = 0; i < selectedCities.length; ++i) {
+            document.write(selectedCities[i]);
+            if (i < (selectedCities.length - 1)) {
+                document.write(" , ");
+            }
+        }
+
+        document.write("<br>");
+
+
+
+        //Qs: 16
+        // Write a program to create a single string from the below mentioned array:
+        var arr = ["This", "is", "my", "cat"];
+        document.write("<br>");
+        document.write("<i>Array :</i>" + "<br>");
+        for (var i = 0; i < arr.length; ++i) {
+            document.write(arr[i]);
+            if (i < (arr.length - 1)) {
+                document.write(",");
+            }
+        }
+        document.write("<br>");
+        document.write("<i>String :</i>" + "<br>");
+        var str = "";
+        for (var i = 0; i < arr.length; ++i) {
+            str = str + arr[i] + " ";
+        }
+        document.write(str + "<br>");
+
+
+        // Qs: 17
+        // Create a new array.Store values one by one in such a way that you can access the values in the order in which they were stored.
+        // (FIFO - First In First Out)
+        var devices = [];
+        devices.push("keyboard");
+        devices.push("mouse");
+        devices.push("printer");
+        devices.push("monitor");
+        document.write("<i>Devices :</i>" + "<br>");
+        for (var i = 0; i < devices.length; ++i) {
+            document.write(devices[i]);
+            if (i < (devices.length - 1)) {
+                document.write(",");
+            }
+        }
+        document.write("<br>");
+        for (var i = 0; i < 4; ++i) {
+            document.write("Out : " + "<br>");
+            document.write(devices.shift() + "<br>");
+        }
+
+
+        // Qs: 18
+        // Create a new array.
+        // Store values one by one in such a way that you can access the values in reverse order.
+        // (Last In-First Out)
+        document.write("<i>Devices :</i>" + "<br>");
+        devices.push("keyboard");
+        devices.push("mouse");
+        devices.push("printer");
+        devices.push("monitor");
+        for (var i = 0; i < devices.length; ++i) {
+            document.write(devices[i]);
+            if (i < (devices.length - 1)) {
+                document.write(",");
+            }
+        }
+        document.write("<br>");
+        for (i = devices.length - 1; i >= 0; i--) {
+            document.write("Out : " + "<br>");
+            document.write(devices[i] + "<br>");
+        }
+        document.write("<br>");
+
+
+        //Qs: 19
+        // Write a program to store phone manufacturers(Apple,Samsung, Motorola, Nokia, Sony & Haier) in an array.
+        // Display the following dropdown / select menu in your browser using document.write() method:
+        // Declare and initialize array
+        var phoneManufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+
+        // Display dropdown using document.write()
+        document.write("<select>");
+
+        for (var i = 0; i < phoneManufacturers.length; i++) {
+            document.write("<option>" + phoneManufacturers[i] + "</option>");
+        }
+
+        document.write("</select>");
+        document.write("<br>");
+
+
+
+        // Qs: 20
+        //Declare and initialize an empty multidimensional array. (Array of arrays)
+        var multi_dimensional_array = [
+            [],
+            [],
+            [],
+            []
+        ];
+
+
+        //Qs: 21
+        // Declare and initialize a multidimensional array representing the following matrix:
+        var multiDimensionalArray = [
+            [0, 1, 2, 3],
+            [1, 0, 1, 2],
+            [2, 1, 0, 1]
+        ];
+        document.write("<br>");
+
+        for (var i = 0; i < multiDimensionalArray.length; ++i) {
+            for (var j = 0; j < multiDimensionalArray[i].length; ++j) {
+                document.write(multiDimensionalArray[i][j] + " ");
+            }
+            document.write("<br>");
+        }
+        //------------- End --------------------
+    </script>
+</body>
+
+</html>
