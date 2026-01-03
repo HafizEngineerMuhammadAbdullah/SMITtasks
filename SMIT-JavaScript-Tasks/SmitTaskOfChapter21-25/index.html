@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task21-25(String-Methods)</title>
+</head>
+
+<body>
+    <script>
+        // -----------------| String Methods|-----------------------
+        // Qs: 01
+        // Write a program that takes two user inputs for first and last name using prompt and merge them in a new variable titled fullName.
+        // Greet the user using his full name.
+        var firstName = prompt("Please, Enter your first name:...");
+        var lastName = prompt("Please, Enter your last name:...");
+        var fullName = firstName + lastName;
+        alert("Hello! " + fullName);
+
+
+        // Qs : 02
+        // Write a program to take a user input about his favorite mobile phone model.
+        // Find and display the length of user input in your browser.
+        var favoriteMobile = prompt("Input your favourite mobile phone and it's model:...");
+        var strLength = favoriteMobile.length;
+        document.write("My favourite phone is : " + favoriteMobile + "<br>");
+        document.write("Length of string : " + strLength + "<br>");
+        document.write("<br>");
+
+
+
+        // Qs : 03
+        // Write a program to find the index of letter “n” in the word “Pakistani” and display the result in your browser
+        var ourCountry = "Pakistani";
+        document.write("String : " + ourCountry + "<br>");
+        for (let i = 0; i < ourCountry.length; ++i) {
+            if (ourCountry[i] === "n") {
+                document.write("Index of 'n' is : " + i + "<br>");
+                break;
+            }
+        }
+        document.write("<br>");
+
+
+        // Qs: 04
+        // Write a program to find the last index of letter “l” in the word “Hello World” and display the result in your browser.
+        var greetMsg = "Hello World";
+        document.write("String : " + greetMsg + "<br>");
+        for (let i = greetMsg.length - 1; i >= 0; --i) {
+            if (greetMsg[i] === 'l') {
+                document.write("Last index of 'l' : " + i + "<br>");
+                break;
+            }
+        }
+        document.write("<br>");
+
+
+
+        // Qs: 05
+        // Write a program to find the character at 3rd index in the word “Pakistani” and display the result in your browser.
+        document.write("String : " + ourCountry + "<br>");
+        document.write("Character at index 3 is : " + ourCountry[3] + "<br>");
+        document.write("<br>");
+
+
+        // Qs : 06
+        // Repeat Q1 using string concat() method.
+        // OR
+        fullName = firstName.concat(lastName);
+        alert("Welcome! " + fullName);
+
+
+        // Qs : 07
+        // Write a program to replace the “Hyder” to “Islam” in the word “Hyderabad” and display the result in your browser.
+        var city = "Hyderabad";
+        document.write("City : " + city + "<br>");
+        for (let i = 0; i < city.length; i++) {
+            if (city.slice(i, i + 5) === "Hyder") {
+                city = "Islam" + city.slice(i + 5);
+                break;
+            }
+        }
+
+
+        document.write("After replacement : " + city);
+        document.write("<br>");
+
+        //OR 
+        city = "Hyderabad";
+        city = city.replace("Hyder", "Islam");
+        document.write("After replacement : " + city);
+        document.write("<br>");
+
+
+        // Qs: 08
+        // Write a program to replace all occurrences of “and” in the string with “&” and display the result in your browser.
+        var message = "Ali and Sami are best friends. They play cricket and football together.";
+        document.write("Message : " + message + "<br>");
+        for (let i = 0; i < message.length; i++) {
+            if (message.slice(i, i + 3) === "and") {
+                message = message.slice(0, i) + "&" + message.slice(i + 3);
+            }
+        }
+        document.write("After replacement : " + message + "<br>");
+        document.write("<br>");
+        //OR:
+        message = "Ali and Sami are best friends. They play cricket and football together.";
+        message = message.replaceAll("and", "&");
+        document.write("After replacement : " + message + "<br>");
+        document.write("<br>");
+        //OR:
+        message = "Ali and Sami are best friends. They play cricket and football together.";
+        message = message.replace(/and/g, "&");
+        document.write("After replacement : " + message + "<br>");
+        document.write("<br>");
+
+
+        // Qs: 09
+        // Write a program that converts a string “472” to a number 472.
+        // Display the values & types in your browser.
+        var str = "472";
+        document.write("Value : " + str + "<br>");
+        document.write("Type : " + typeof (str) + "<br>");
+        var num = Number(str);
+        document.write("Value : " + num + "<br>");
+        document.write("Type : " + typeof (num) + "<br>");
+        document.write("<br>");
+
+
+        // Qs: 10
+        // Write a program that take a URL as user input in the following format: (www.facebook.com / www.yahoo.com ).
+        // Extract the domain name & show in your browser
+        var URL = prompt("Please , Enter a valid URL in the following format:...", "www.yahoo.com");
+        document.write("URL : " + URL + "<br>");
+        var domain = URL.slice(4);
+        document.write("Domain : " + domain + "<br>");
+        document.write("<br>");
+
+
+        // Qs: 11
+        // Write a program that takes user input. Convert and show the input in capital letters.
+        var userInp = prompt("Enter any meaningful word:...");
+        document.write("User Input : " + userInp + "<br>");
+        userInp = userInp.toUpperCase();
+        document.write("Upper Case : " + userInp + "<br>");
+        document.write("<br>");
+
+
+        // Qs: 12
+        // Write a program that takes user input. Convert and show the input in small letters.
+        userInp = prompt("Enter any meaningful word:...");
+        document.write("User Input : " + userInp + "<br>");
+        userInp = userInp.toLowerCase();
+        document.write("Lower Case : " + userInp + "<br>");
+        document.write("<br>");
+
+
+        // Qs : 13
+        // Write a program that takes user input. Convert and show the input in title case.
+        userInp = prompt("Enter any meaningful word:...");
+        document.write("User Input : " + userInp + "<br>");
+        userInp = userInp.charAt(0).toUpperCase() + userInp.slice(1);
+        document.write("Title Case : " + userInp + "<br>");
+        document.write("<br>");
+
+        // Qs : 14
+        var num = 35.36;
+        document.write("Number : " + num + "<br>");
+        str = num.toString();
+        str = str.replace(".", "");
+        document.write("Result : " + str + "<br>");
+        document.write("<br>");
+
+        // Qs : 15
+        // Write a program to display the value of x in your browser if a =”3” and b =”3”?
+        var a = "3", b = "3";
+        x = a + b;
+        document.write("a : " + a + "<br>");
+        document.write("b : " + b + "<br>");
+        document.write("a + b : " + x + "<br>");
+        document.write("<br>");
+
+
+        // Qs : 16
+        // Write a program to display the value of y in your browser if a=”3” and b=”3”?
+        var y = a - b;
+        document.write("a : " + a + "<br>");
+        document.write("b : " + b + "<br>");
+        document.write("a - b : " + y + "<br>");
+        document.write("<br>");
+
+
+        // Qs: 17
+        // Write a program to take user input and store username in a variable.
+        // If the username contains any special symbol among [@ . , !], 
+        // prompt the user to enter a valid username.
+        // For character codes of[@ . , !], refer to ASCII table at the end of this document.
+
+        var userName = prompt("Enter your dear name:...");
+        let isSpecialSymbol = false;
+        for (let i = 0; i < userName.length; i++) {
+            if (userName.charAt(i) === "@" || userName.charAt(i) === "." || userName.charAt(i) === "," || userName.charAt(i) === "!") {
+                isSpecialSymbol = true;
+                break;
+            }
+        }
+        if (isSpecialSymbol) {
+            alert("Please , Enter a valid user name.");
+        }
+        document.write("<br>");
+
+        //Or using ASCII codes:
+        isSpecialSymbol = false;
+        for (let i = 0; i < userName.length; i++) {
+            if (userName.charCodeAt(i) == 33 || userName.charCodeAt(i) == "44" || userName.charCodeAt(i) == 46 || userName.charCodeAt(i) == 64) {
+                isSpecialSymbol = true;
+                break;
+            }
+        }
+        if (isSpecialSymbol) {
+            alert("Please , Enter a valid user name");
+        }
+        document.write("<br>");
+
+
+
+        // Qs : 18
+        // You have an array
+        var bakeryItems = ["cake", "apple pie", "cookie", "chips", "patties"];
+        // Write a program to enable “search by user input” in an array.
+        // After searching, prompt the user whether the given item is found in the list or not.
+        // Note: Perform case insensitive search.
+        //  Whether the user enters cookie, Cookie, COOKIE or coOkIE, program should inform about its availability.
+        var order = prompt("Welcome to ABC Bakery. What do you want to order sir / ma'am ?");
+        let foundIdx = -1;
+        for (let i = 0; i < bakeryItems.length; i++) {
+            if (bakeryItems[i] === order) {
+                foundIdx = i;
+                break;
+            }
+        }
+        if (foundIdx !== -1) {
+            document.write(order + " is available at index " + foundIdx + " in our bakery  <br>");
+        } else {
+            document.write("We are sorry . " + order + " is not available in our bakery <br>");
+        }
+        document.write("<br>");
+
+
+
+
+        // Qs : 19
+        // Write a program to take two input strings.
+        //  Using string comparison, tell which string is greater than other or if they both are equal.
+        var str1 = prompt("Please , Enter first string:...");
+        var str2 = prompt("Please , Enter second string:...");
+        if (str1 < str2) {
+            document.write(str1 + " is less than " + str2 + "<br>");
+        } else if (str1 > str2) {
+            document.write(str1 + " is greater than " + str2 + "<br>");
+        } else {
+            document.write(str1 + " is equal to " + str2 + "<br>");
+        }
+
+
+        document.write("<br>");
+
+        // Qs : 20
+        // Write a program to take password as an input from user.
+        // The password must qualify these requirements:
+        // a.It should contain alphabets and numbers
+        //  b.It should not start with a number 
+        // c.It must at least 6 characters long 
+        //  If the password does not meet above requirements,
+        // prompt the user to enter a valid password.
+        // For character codes of a - z, A - Z & 0 - 9, refer to ASCII table at the end of this document.
+
+
+        var password = prompt("Enter your password:");
+        let isAlphabet = false;
+        let isNumber = false;
+        let isDigit = false;
+
+        // check length
+        if (password.length >= 6) {
+
+            // check first character is digit or not
+            if (password.charCodeAt(0) >= 48 && password.charCodeAt(0) <= 57) {
+                isDigit = true;
+            }
+
+            for (let i = 0; i < password.length; i++) {
+
+                let code = password.charCodeAt(i);
+
+                // check alphabets (A-Z, a-z)
+                if ((code >= 65 && code <= 90) || (code >= 97 && code <= 122)) {
+                    isAlphabet = true;
+                }
+
+                // check digits (0-9)
+                if (code >= 48 && code <= 57) {
+                    isNumber = true;
+                }
+            }
+            // validations
+            if (!isNumber) {
+                document.write("Password must contain a number.<br>");
+                document.write("Please , Enter a valid password<br>");
+            }
+
+            if (isDigit) {
+                document.write("Password cannot begin with a number.<br>");
+                document.write("Please , Enter a valid password<br>");
+            }
+
+            if (!isAlphabet) {
+                document.write("Password must contain an alphabet.<br>");
+                document.write("Please , Enter a valid password<br>");
+            }
+
+            // success message
+            if (isAlphabet && isNumber && !isDigit && password.length >= 6) {
+                document.write("Password is valid.<br>");
+            }
+
+        } else {
+            document.write("Password must be at least 6 characters long.<br>");
+            document.write("Please , Enter a valid password<br>");
+        }
+        document.write("<br>");
+
+
+        // Qs : 21
+        //Write a program to convert the following string to an array using string split method.
+        var university = "University of Karachi";
+        // Display the elements of array in your browser.
+        var nameOfUniversity = university.split(" ");
+        for (let i = 0; i < nameOfUniversity.length; i++) {
+            document.write(nameOfUniversity[i] + "<br>");
+        }
+        document.write("<br>");
+
+
+
+
+        // Qs : 22
+        // Write a program to display the last character of a user input.
+        var userInput = prompt("Please , Enter any meaningful word:...");
+        document.write("User input : " + userInput + "<br>");
+        document.write("Last character of input : " + userInput[userInput.length - 1] + "<br>");
+        document.write("<br>");
+
+
+        // Qs : 23
+        // You have a string “The quick brown fox jumps over the lazy dog”.
+        // Write a program to count number of occurrences of word “the” in given string.
+        var text = "The quick brown fox jumps over the lazy dog";
+        var the = 0;
+        document.write("Text : " + text + "<br>");
+        for (let i = 0; i < text.length; i++) {
+            if ((text.slice(i, i + 3) === "the") || (text.slice(i, i + 3) === "The")) {
+                the++;
+            }
+        }
+        document.write("There are " + the + " occurrence(s) of the word 'the'" + "<br>");
+        document.write("<br>");
+
+
+        // Qs : 24
+        // Write a program to count number of vowels & consonants in given string.
+        var str = prompt("Enter any word to count the number of vowels and consonants in the word:...");
+        var str1 = str.toLowerCase();
+        var vowels = 0;
+        var consonants = 0;
+        for (let i = 0; i < str1.length; ++i) {
+            if (str1.charAt(i) === 'a' || str1.charAt(i) === 'e' || str1.charAt(i) === 'i' || str1.charAt(i) === 'o' || str1.charAt(i) === 'u') {
+                vowels++;
+            } else {
+                consonants++;
+            }
+        }
+        document.write("There are " + vowels + " vowels in the given word " + str + "<br>");
+        document.write("There are " + consonants + " consonants in the given word " + str + "<br>");
+        document.write("<br>");
+
+        // ----------------------------------END ---------------------------------------------------
+
+
+
+
+    </script>
+</body>
+
+</html>
