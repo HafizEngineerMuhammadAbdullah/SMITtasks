@@ -15,7 +15,7 @@
         // Greet the user using his full name.
         var firstName = prompt("Please, Enter your first name:...");
         var lastName = prompt("Please, Enter your last name:...");
-        var fullName = firstName + lastName;
+        var fullName = firstName + " " + lastName;
         alert("Hello! " + fullName);
 
 
@@ -67,7 +67,7 @@
         // Qs : 06
         // Repeat Q1 using string concat() method.
         // OR
-        fullName = firstName.concat(lastName);
+        fullName = firstName.concat(" ", lastName);
         alert("Welcome! " + fullName);
 
 
@@ -133,7 +133,7 @@
         // Extract the domain name & show in your browser
         var URL = prompt("Please , Enter a valid URL in the following format:...", "www.yahoo.com");
         document.write("URL : " + URL + "<br>");
-        var domain = URL.slice(4);
+        var domain = URL.replace("www.", "");
         document.write("Domain : " + domain + "<br>");
         document.write("<br>");
 
@@ -233,6 +233,7 @@
         // Note: Perform case insensitive search.
         //  Whether the user enters cookie, Cookie, COOKIE or coOkIE, program should inform about its availability.
         var order = prompt("Welcome to ABC Bakery. What do you want to order sir / ma'am ?");
+        order = order.toLowerCase();
         let foundIdx = -1;
         for (let i = 0; i < bakeryItems.length; i++) {
             if (bakeryItems[i] === order) {
@@ -336,7 +337,7 @@
         //Write a program to convert the following string to an array using string split method.
         var university = "University of Karachi";
         // Display the elements of array in your browser.
-        var nameOfUniversity = university.split(" ");
+        var nameOfUniversity = university.split("");
         for (let i = 0; i < nameOfUniversity.length; i++) {
             document.write(nameOfUniversity[i] + "<br>");
         }
@@ -375,10 +376,12 @@
         var vowels = 0;
         var consonants = 0;
         for (let i = 0; i < str1.length; ++i) {
-            if (str1.charAt(i) === 'a' || str1.charAt(i) === 'e' || str1.charAt(i) === 'i' || str1.charAt(i) === 'o' || str1.charAt(i) === 'u') {
-                vowels++;
-            } else {
-                consonants++;
+            if (str1[i] >= 'a' && str1[i] <= 'z') {
+                if ("aeiou".includes(str1[i])) {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
             }
         }
         document.write("There are " + vowels + " vowels in the given word " + str + "<br>");
