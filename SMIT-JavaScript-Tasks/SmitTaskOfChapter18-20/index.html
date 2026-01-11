@@ -151,6 +151,7 @@
         for (let i = 0; i < A.length; ++i) {
             if (A[i] === order) {
                 foundAtIndex = i;
+                break;
             }
         }
         if (foundAtIndex !== -1) {
@@ -245,10 +246,14 @@
         var students = ["Ali", "Sami", "Taha", "Inam"];
         var scores = [58, 73, 89, 90];
         // Write a program to generate the following HTML table in your browser using JS.
-        document.write("Students " + " Scores " + "<br>");
+        document.write("<table border='1' style='border-collapse: collapse; width: 200px;'>");
+        document.write("<tr><th>Student</th><th>Score</th></tr>");
+
         for (let i = 0; i < scores.length; ++i) {
-            document.write(students[i] + "\t\t\t\t" + scores[i] + "<br>");
+            document.write("<tr><td>" + students[i] + "</td><td>" + scores[i++] + "</td></tr>");
         }
+
+        document.write("</table>");
         document.write("<br>");
 
 
@@ -290,7 +295,7 @@
         // Value should be decreasing by 0.5 each time, as long as x Value remains positive.
 
         let num = Number(prompt("Enter a number:..."));
-        for (let i = num; i >= 0; i =- 0.5) {
+        for (let i = num; i >= 0; i -= 0.5) {
             document.write(i);
             if (i > 0) {
                 document.write(" , ");
