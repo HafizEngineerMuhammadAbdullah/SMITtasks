@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task43-48(Events)(11-01-2026)</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+
+<body>
+
+
+    <!-- Qs : 01 -->
+    <a href="javascript:void()" onclick="showAlert()">Click me!</a>
+
+
+    <!-- Qs : 02 -->
+    <h1>Mobile Phone Lookup</h1>
+    <!-- Mobile images -->
+    <div class="container">
+        <div>
+            <img src="./2.-Samsung-Z-Flip-scaled.jpg" alt="Samsung" onclick="showMsg()">
+            <p>Samsung-Z-Flip-scaled</p>
+        </div>
+        <div>
+            <img src="./apple_iphone-12_new-design_geo_10132020.jpg.news_app_ed.jpg" alt="Apple-iphone"
+                onclick="showMsg()">
+            <p>Apple iphone8-Pro</p>
+        </div>
+        <div>
+            <img src="./images.jpg" alt="phone" onclick="showMsg()">
+            <p>Mini Phone</p>
+        </div>
+        <div>
+            <img src="./s-l1200.png" alt="phone" onclick="showMsg()">
+            <p>Infinix Hot9 play</p>
+        </div>
+    </div>
+
+
+    <!-- Qs : 03 -->
+    <!-- Table -->
+    <p>Before Delete</p>
+    <div class="container2">
+        <table>
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Class</th>
+            </tr>
+            <tr class="row">
+                <td>0</td>
+                <td>Abdullah</td>
+                <td>14</td>
+                <td colspan="1"></td>
+                <!-- this refers to the clicked button -->
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Abdullah</td>
+                <td>08</td>
+                <td colspan="1"></td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Abdur-Rehman</td>
+                <td>10</td>
+                <td colspan="1"></td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Abdul</td>
+                <td>9</td>
+                <td colspan="1"></td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Huzaifa</td>
+                <td>15</td>
+                <td colspan="1"></td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Ahmed</td>
+                <td>4</td>
+                <td colspan="1"></td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Waqas</td>
+                <td>7</td>
+                <td colspan="1"></td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Ali</td>
+                <td>12</td>
+                <td colspan="1"></td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Qadir</td>
+                <td>09</td>
+                <td colspan="1"></td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Ibrahim</td>
+                <td>05</td>
+                <td colspan="1"></td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+
+            </tr>
+        </table>
+    </div>
+
+    <!-- Qs : 04 -->
+    <div class="container2">
+        <img src="./beautiful-natural-image.jpg" id="after" alt="Nature Image"
+            onmouseover="swapPic(id,'./Nature-image.jpg');" onmouseout="this.src='./free-image.avif'">
+    </div>
+
+
+
+    <!-- Qs : 05 -->
+     <h2 style="text-align: center;">Counter: <span id="count">0</span></h2>
+    <div id="btn">
+
+        <button onclick="increase()">Increase Button &#8593;</button> <!-- ↑ -->
+        <br />
+        <button onclick="decrease()">Decrease Button &#8595;</button> <!-- ↓ -->
+        <br />
+        <button onclick="increase()">Increase Button &#9650;</button>
+        <br />
+        <button onclick="decrease()">Decrease Button &#9660;</button>
+        <br />
+    </div>
+    <script>
+        // Qs : 01
+        // Show an alert box on click on a link.
+        const showAlert = function () {
+            alert("Welcome to JS home land!");
+        }
+
+        // Qs : 02
+        // Display some Mobile images in browser.
+        // On click on an image Show the message in alert to user.
+        const showMsg = function () {
+            alert("Thanks for purchasing a phone from us!");
+        }
+
+
+        // Qs : 03
+        // Display 10 student records in table and each row should contain a delete button. 
+        // If you click on a button to delete a record, entire row should be deleted. 
+        const deleteRow = function (btn) {
+            let row = btn.parentNode.parentNode; // td → tr
+            row.remove(); // removes the entire row
+        }
+
+        // const deleteRow = function(btn) {
+        // btn.closest("tr").remove();
+        // }
+
+
+        // Qs : 04
+        // Display an image in browser.
+        // Change the picture on mouseover and set the first picture on mouseout.
+        const swapPic = function (eId, newImgSrc) {
+            document.getElementById(eId).src = newImgSrc;
+        }
+
+
+        // Qs : 05
+        // Show a counter in browser.
+        // Counter should increase on click on increase button and decrease on click on decrease button.
+        // And show updated counter value in browser
+        const increase = function () {
+            let count = document.getElementById("count").innerText;
+            count++;
+            document.getElementById("count").innerText = count;
+        }
+
+        const decrease = function () {
+            
+                let count = document.getElementById("count").innerText;
+                if (count > 0) {
+                count--;
+                document.getElementById("count").innerText = count;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

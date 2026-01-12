@@ -54,7 +54,11 @@
                 document.write("Result is : " + (num1 * num2) + "<br>");
                 break;
             case "/":
-                document.write("Result is : " + (num1 / num2) + "<br>");
+                if (num2 === 0) {
+                    document.write("Cannot divide by zero");
+                } else {
+                    document.write("Result is : " + (num1 / num2) + "<br>");
+                }
                 break;
             case "%":
                 document.write("Result is : " + (num1 % num2));
@@ -103,7 +107,7 @@
         // The getDay() method returns the weekday as a number between 0 and 6.
         // (Sunday=0, Monday=1, Tuesday=2 ...).
         // // If today is neither Saturday (6) nor Sunday (0), write a default message: 
-        switch (today) {
+        switch (true) {
             case (today > 0 && today < 6):
                 document.write("Working day!<br>");
                 break;
@@ -122,15 +126,16 @@
         function checkCar() {
             var text;
             var favCar = prompt("What is your favorite car ? ");
+            favCar = favCar.toLowerCase();
             switch (favCar) {
                 //Add code here
-                case "BMW":
+                case "bmw":
                     text = "German car";
                     break;
-                case "Ford":
+                case "ford":
                     text = "American car";
                     break;
-                case "Peugeot":
+                case "peugeot":
                     text = "French car";
                     break;
                 default:
@@ -148,15 +153,15 @@
         function checkFruit() {
             var text;
             var fruits = prompt("Enter a fruit name");
-            // fruits = fruits.toLowerCase();
+            fruits = fruits.toLowerCase();
             switch (fruits) {
-                case "Banana":
+                case "banana":
                     text = "Banana is good!";
                     break;
-                case "Orange":
+                case "orange":
                     text = "I am not a fan of orange.";
                     break;
-                case "Apple":
+                case "apple":
                     text = "How you like them apples?";
                     break;
                 default:
@@ -614,6 +619,7 @@
         do {
             if (A[i] === order) {
                 foundAtIndex = i;
+                break;
             }
             ++i;
         } while (i < A.length);

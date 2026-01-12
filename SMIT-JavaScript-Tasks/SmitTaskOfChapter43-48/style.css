@@ -1,0 +1,79 @@
+/* Reset Default Space */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* For heading */
+h1,
+p {
+  color: #77d8d3;
+  text-align: center;
+}
+p {
+  margin-top: 10px;
+  color: #be7910;
+}
+
+/* For conatiner */
+div.container {
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 7%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* For container2 */
+div.container2 {
+  height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* For div box */
+div.container > div {
+  height: 300px;
+  width: 300px;
+}
+
+/* For div image */
+.container div > img {
+  height: 270px;
+  width: 270px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* For div-image */
+.container2 > img {
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* For Button */
+div#btn{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+div#btn > button{
+  color : #afeb0a;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 20px;
+  padding: 8px;
+}
+
+
